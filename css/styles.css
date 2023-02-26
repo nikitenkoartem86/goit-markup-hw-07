@@ -585,7 +585,7 @@ margin: 0;}
         .team-list {
         display: flex;
         justify-content: center;
-        gap: 24px;
+        gap: 64px 24px;
         flex-wrap: wrap;
         width: 768px;
             }
@@ -632,7 +632,7 @@ margin: 0;}
 }
 /* tablet screen */
 @media screen and (min-width: 768px) {
-    .team-item {
+    .team-item {margin: 0;
         
         
     }.team-item:not(:last-child) {
