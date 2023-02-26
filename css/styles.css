@@ -361,25 +361,29 @@ margin: 0;}
                }
            }
 }
+/* phone screen */
 
 .hero-title {
-    /* phone screen */
+    
     font-weight: 700;
     font-size: 36px;
     line-height: 1.1;
-    max-width: 320px;
+    max-width: 318px;
     margin-left: auto;
     margin-right: auto;
-    text-align: center;
+    /* text-align: center; */
     letter-spacing: 0.02em;
     color:var(--white-text-color);}
-     /* tablet screen */
-     @media screen and (max-width: 320px)and( min-width: 768px) {
-         .hero-title{font-size: 56px;
-            line-height: 1.1;
-        width: 494px;}
-     }
-    
+
+     
+        /* tablet screen */
+        @media screen and (min-width: 768px) {
+        .hero-title {
+            font-size: 56px;
+            line-height:calc(60/56);
+            max-width: 494px;
+        }
+        }
     
    
     .hero-btn{
@@ -433,7 +437,7 @@ margin: 0;}
  /* desctop screen */
   @media screen and (min-width: 1200px) {
     .features-list {flex-wrap: nowrap;
-     
+     justify-content: center;
      }
   }
 
@@ -506,7 +510,8 @@ margin: 0;}
         width: 264px;}
 }
 /* phone screen */
-.features-item {padding-bottom: 72px;}
+.features-item:not(:last-child) {margin-bottom: 72px;
+}
 /* tablet screen */
 @media screen and (min-width: 768px) {
     .features-item {width: 356px;
@@ -515,7 +520,10 @@ margin: 0;}
 
 /* desctop screen */
 @media screen and (min-width: 1200px) {
-    .features-item {}
+    .features-item {margin-bottom: 0 auto;width: auto;}
+    .features-item:not(:last-child) {
+        margin-bottom: 0;
+    }
 }
 
 /* phone screen */
@@ -613,30 +621,31 @@ margin: 0;}
                 
         
                  /* phone screen */
+ .team-item:not(:last-child) {margin-bottom: 72px;}
 .team-item{
     background-color:var(--white-text-color);
      box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
      border-radius: 0px 0px 4px 4px;
      width: 264px;
      margin: 0 auto;
-    margin-bottom: 72px;
+    
 }
 /* tablet screen */
 @media screen and (min-width: 768px) {
     .team-item {
         
         
-        margin-bottom: 64px;
-        
+    }.team-item:not(:last-child) {
+        margin-bottom: 0px;
     }
 }
 /* desctop screen */
 @media screen and (min-width: 1200px) {
-    .team-item {
-       
-    }
+.team-item {margin: 0;}
 }
-        
+    
+       
+      
                  .team-name {
                     margin-bottom: 8px;
                     font-weight: 500;
@@ -661,7 +670,7 @@ margin: 0;}
                  }
 /* phone screen */
 .customers-item {
-    padding-bottom: 72px;}
+    }
 
 /* tablet screen */
 @media screen and (min-width: 768px) {
@@ -676,7 +685,7 @@ margin: 0;}
                  .customers{
                     display: flex;
                     justify-content: center;
-                    gap: 16px;
+                    gap:72px 16px;
                     flex-wrap: wrap;
 
 
@@ -684,7 +693,7 @@ margin: 0;}
   /* tablet screen */
   @media screen and (min-width: 768px) {
       .customers {
-        gap: 24px;
+        gap:72px 24px;
      }
   }
   
@@ -721,11 +730,12 @@ color: var(--subtle-text);}
   /* tablet screen */
   @media screen and (min-width: 768px) {
     .footer-container {display: flex;
-    flex-wrap: wrap;}
+    flex-wrap: wrap;
+gap: 72px 24px;}
   }
 /* desctop screen */
 @media screen and (min-width: 1200px) {
-    .footer-container {}
+    .footer-container {gap: 0;}
 }
 
 
@@ -735,7 +745,7 @@ color: var(--subtle-text);}
 /* tablet screen */
 @media screen and (min-width: 768px) {
 .footer-logo {margin-left: 108px;
-    margin-right: 24px;}
+    }
 }
 /* desctop screen */
 @media screen and (min-width: 1200px) {
@@ -765,15 +775,27 @@ color: var(--subtle-text);}
 }
 
 
+/* phone screen */
+.socials-dark { display: flex;gap: 16px;justify-content: center;}
 
+/* tablet screen */
+@media screen and (min-width: 768px) {
+.socials-dark {}
+}
+
+/* desctop screen */
+@media screen and (min-width: 1200px) {
+.socials-dark {  gap: 24px;
+    margin-top: 16px;
+     }
+}
 
 
                 
                  .socials-dark{
-                    display: flex;
-                    gap: 24px;
-                    margin-top: 16px;
-                    justify-content: center;
+                   
+                   
+                   
                  }
                                  
                 
@@ -862,12 +884,12 @@ color: var(--subtle-text);}
 
     /* tablet screen */
     @media screen and (min-width: 768px) {
-        .subscribe {}
+        .subscribe {text-align: start;}
     }
 
     /* desctop screen */
     @media screen and (min-width: 1200px) {
-        .subscribe {text-align: start;}
+        .subscribe {}
     }
             
               
@@ -884,7 +906,10 @@ color: var(--subtle-text);}
   
 }
 
-
+/* tablet screen */
+@media screen and (min-width: 768px) {
+.footer-mail {margin-left: 108px;}
+}
 
 
 
@@ -906,18 +931,25 @@ color: var(--subtle-text);}
                  height :40px;
                  color:var(--subtle-text)
                 }
+/* tablet screen */
+@media screen and (min-width: 768px) {
+    .mail-item { margin-bottom:0; width :264px;}
+}
+
 /* desctop screen */
 @media screen and (min-width: 1200px) {
     .mail-item {
-       margin-bottom:0;
-       width :264px;
+      
+      width: auto;
     }
 }
 
 
-   /* desctop screen */
-   @media screen and (min-width: 1200px) {
-    .mail-btn {display: flex;}
+   /* tablet screen */
+   @media screen and (min-width: 768px) {
+    .mail-btn {display: flex;
+    gap: 24px;
+}
    }   
 /* phone screen */
 .subscribe-btn{
@@ -941,7 +973,7 @@ color: var(--subtle-text);}
 
 /* tablet screen */
 @media screen and (min-width: 768px) {
-    .subscribe-btn {}
+    .subscribe-btn {padding: 0 24px;}
 }
 
 /* desctop screen */
@@ -1119,13 +1151,29 @@ color: var(--subtle-text);}
 
 /* tablet screen */
 @media screen and (min-width: 768px) {
-.modal {}
+.modal {position: absolute;
+    top: 50%;
+    left: 50%;
+    padding-top: 72px;
+    padding-bottom: 24px;
+    padding-right: 24px;
+    padding-left: 24px;
+    width: 95%;
+    max-width: 408px;
+    height: 95%;
+    max-height: 586px;
+    transform: translateX(-50%) translateY(-50%);
+    overflow: scroll;
+    background-color: var(--white-text-color);
+    border-radius: 4px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 1px 3px rgba(0, 0, 0, 0.12),
+        0px 2px 1px rgba(0, 0, 0, 0.2);}
 }
 
 /* desctop screen */
 @media screen and (min-width: 1200px) {
-    .modal {max-width: 408px;
-       max-height: 586px;
+    .modal {
    
     
     }
@@ -1175,12 +1223,12 @@ color: var(--subtle-text);}
 .modal-form {
     display: flex;
     flex-direction: column;
-    /* font-size: 12px;
+    font-size: 12px;
     line-height: 1.33;
-    letter-spacing: 0.04em; */
+    letter-spacing: 0.04em;
 }
     .modal-form-field {
-     margin-bottom: 16px;
+     margin-bottom: 8px;
  }
  .modal-form-input-desc {
      display: block;
@@ -1397,23 +1445,30 @@ flex-direction: column;
 .mobile-menu .link {
     display: block;
     padding: 10px;
-    color:var(--dark);
+    /* color:var(--dark); */
     text-decoration: none;
 }
 .mobile-menu:hover,
 .mobile-menu:focus{
     color: var(--button-aktive);
 }
-.socials-mobile{
-    gap: 56px;
-    margin-bottom: auto;
+@media screen and (max-width: 320px) {
+.socials-mobile {gap: 30px;}
 }
+@media screen and (min-width:321px) {
+.socials-mobile {gap: 56px;
+    }
+}
+
+
+
+
 .contact-link-mobile-mail{
     margin-top: 40px;
     display: block;
     font-weight: 500;
         font-size: 20px;
-        line-height: 24px;
+        line-height: calc(24/20);
         letter-spacing: 0.02em;
         color:var(--dark);
 }
@@ -1421,7 +1476,7 @@ flex-direction: column;
     
     font-weight: 600;
     font-size: 36px;
-    line-height: 40px;
+    line-height: calc(40/36);
     text-transform: capitalize;
     color:var(--primary-brand);}
     .contact-mobile{
@@ -1429,3 +1484,11 @@ flex-direction: column;
         margin-bottom: 48px;
         /* margin-left: 40px; */
     }
+        .menu-link-mobile{color:var(--dark);}
+    .menu-link-mobile:hover,
+     .menu-link-mobilef:focus{
+        color: var(--primary-brand);
+
+     }
+     .current{color: var(--primary-brand);}
+     
