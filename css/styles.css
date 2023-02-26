@@ -1405,6 +1405,7 @@ flex-direction: column;
     color: var(--button-aktive);
 }
 .socials-mobile{
+    gap: 56px;
     margin-bottom: auto;
 }
 .contact-link-mobile-mail{
